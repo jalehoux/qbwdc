@@ -5,7 +5,7 @@ const app = express()
 
 app.get('/', (req, res) => res.send('test'))
 
-app.listen(3000, () => console.log('Example app listening on port 3000!'))
+app.listen(process.env.PORT || 3000, () => console.log('Example app listening on port 3000!'))
 
 request('https://swapi.co/api/people/1', function (error, response, body) {
   console.log('error:', error); // Print the error if one occurred
