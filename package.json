@@ -1,0 +1,23 @@
+{
+  "name": "qbwdc",
+  "version": "1.0.0",
+  "description": "Quick Base Web Data Connector",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jalehoux/qbwdc.git"
+  },
+  "author": "Jacob Lehoux",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jalehoux/qbwdc/issues"
+  },
+  "homepage": "https://github.com/jalehoux/qbwdc#readme",
+  "dependencies": {
+    "dotenv": "^6.0.0",
+    "express": "^4.16.3"
+  }
+}
