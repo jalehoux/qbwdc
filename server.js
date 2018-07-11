@@ -11,7 +11,10 @@ const options = {
   }
 };
 
-app.get('/', (req, res) => res.send('Hello World1'))
+app.set('view engine', 'pug')
+
+app.get('/', (req, res) => res.render({title: "Quick Base WDC", message: "Hello World"})
+)
 
 app.listen(PORT, () => console.log(`Example app listening on port ${PORT}!`))
 
