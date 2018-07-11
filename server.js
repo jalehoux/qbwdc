@@ -11,12 +11,11 @@ const options = {
   }
 };
 
-app.set('view engine', 'pug')
+app.set('view engine', 'pug');
 
-app.get('/', (req, res) => res.render({title: "Quick Base WDC", message: "Hello World"})
-)
+app.get('/', (req, res) => res.render('index',{title: 'Quick Base WDC', message: 'Hello World'}));
 
-app.listen(PORT, () => console.log(`Example app listening on port ${PORT}!`))
+app.listen(PORT, () => console.log(`Example app listening on port ${PORT}!`));
 
 //xml return
 request(options, function (error, response, body) {
