@@ -12,18 +12,9 @@ const options = {
   }
 };
 
-var test;
-//xml return
-request(options, function (error, response, body) {
-  var test = body;
-  console.log('error:', error); // Print the error if one occurred
-  console.log('statusCode:', response && response.statusCode); // Print the response status code if a response was received
-  console.log('body:', body); // Print the HTML for the Google homepage.
-});
-
 app.set('view engine', 'pug');
 
-app.get('/', (req, res) => res.render('index',{title: 'Quick Base WDC', message: 'Hello World!', qbresponse: test}));
+app.get('/', (req, res) => res.render('index',{title: 'Quick Base WDC', message: 'Hello World!'}));
 
 app.listen(PORT, () => console.log(`Example app listening on port ${PORT}!`));
 
@@ -33,4 +24,12 @@ request(options, function(err, res, body) {
   let json = xml2js(body, function(err, result){
     console.log(result);
   });
+});
+
+//xml return
+request(options, function (error, response, body) {
+  var test = body;
+  console.log('error:', error); // Print the error if one occurred
+  console.log('statusCode:', response && response.statusCode); // Print the response status code if a response was received
+  console.log('body:', body); // Print the HTML for the Google homepage.
 });
