@@ -1,21 +1,21 @@
-console.log("Tableau We Data Connector Fired Up");
-(function () {
-    var myConnector = tableau.makeConnector();
+// console.log("Tableau We Data Connector Fired Up");
+// (function () {
+//     var myConnector = tableau.makeConnector();
 
-    myConnector.getSchema = function (schemaCallback) {
+//     myConnector.getSchema = function (schemaCallback) {
 
-    };
+//     };
 
-    myConnector.getData = function (table, doneCallback) {
+//     myConnector.getData = function (table, doneCallback) {
 
-    };
+//     };
 
-    tableau.registerConnector(myConnector);
-})();
+//     tableau.registerConnector(myConnector);
+// })();
 
-$(document).ready(function () {
-    $("#submitButton").click(function () {
-        tableau.connectionName = "USGS Earthquake Feed";
-        tableau.submit();
-    });
-});
+// $(document).ready(function () {
+//     $("#submitButton").click(function () {
+//         tableau.connectionName = "Quick Base WDC";
+//         tableau.submit();
+//     });
+// });
