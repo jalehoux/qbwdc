@@ -11,7 +11,7 @@ html
    .container.container-table
      .row.vertical-center-row
        .text-center.col-md-4.col-md-offset-4
-         form(method='POST' action='/index')
+         form(method='GET' action='/index')
           div.form-group
            .form-group
              label(for='application-id') Enter your Application ID
@@ -20,5 +20,3 @@ html
              input#user-token.form-control(type='text', placeholder='', data-original-title='', name='userid')
            .pull-right
              button#submitButton.btn.btn-success(type='submit', style='margin: 10px;') Get Quickbase Data
-   div
-     p= test
