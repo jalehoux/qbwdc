@@ -9,6 +9,11 @@ module.exports = function(app, db) {
         quickbase.api('API_GetSchema', {
             dbid: process.env.QB_TABLE_ID
           }).then((results)=>{
+            var allTables = results.table.chdbids;
+            allTables.forEach(element => {
+              //make a table obj
+              //make a columns obj
+            });
             res.send(results);
           });
     })
