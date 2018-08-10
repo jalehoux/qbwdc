@@ -5,9 +5,8 @@ console.log("Tableau We Data Connector Fired Up");
     myConnector.getSchema = function (schemaCallback) {
             $.get('/schema')
                 .then(function(data) { 
-                    var tables = JSON.parse(data)
-                    console.log(tables);
-                    schemaCallback(tables);  
+                    console.log(data);
+                    schemaCallback(data);  
                 });
             };
 
