@@ -11,10 +11,6 @@ module.exports = function(app, db) {
           }).then((results)=>{
             var allFields = results.table.fields;
             console.log(allFields)
-            allFields.forEach(element => {
-              //make a table obj
-              //make a columns obj
-            });
             res.send(allFields);
           });
     })
