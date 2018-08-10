@@ -3,8 +3,11 @@ console.log("Tableau We Data Connector Fired Up");
     var myConnector = tableau.makeConnector();
 
     myConnector.getSchema = function (schemaCallback) {
-        getJSON('/schema');
-    };
+        getJSON('/schema',function(data){
+        var tables = JSON.parse(data)  
+        schemaCallback(tables); 
+            });
+        };
 
     myConnector.getData = function (table, doneCallback) {
         getJSON('/data');
@@ -20,7 +23,7 @@ $(document).ready(function () {
     });
 });
 
-function getJSON(path) {
+function getJSON(path, cb) {
     $.get(path)
     .then(function(data) { 
         console.log(data); 
